@@ -1,5 +1,26 @@
+
+//Function that I created
 function reverseString(str) {
-  // type your code here
+  let newString = []
+  let splitString = str.split('')
+  let ittSplitString = [...splitString]
+  i = 0
+  while (i <= splitString.length) {
+    letter = ittSplitString.pop()
+    newString.push(letter)
+    i = i + 1
+  }
+  let string = newString.join('')
+  return string
+}
+
+//Function that ChatGPT created
+function reverseString(str) {
+  let reversed = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  return reversed;
 }
 
 if (require.main === module) {
